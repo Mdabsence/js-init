@@ -1,0 +1,4 @@
+function charCount(str, search)
+{
+    
+}
