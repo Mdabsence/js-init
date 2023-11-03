@@ -1,7 +1,20 @@
-function findLonguestWord(str)
+function findLongestWord(str)
 {
-    let word = str.split(" ");
-    let result = word[0];
+    //On transforme la chaine en tableau
+    let words = str.split(" ");
+    //on considere le premier mot comme étant le plus long
+    let result = words[0];
 
-    for(let word of word)
+    //On boucle sur chaque mot du tableau
+    for(let word of words)
+    {
+        //Si la longueur du mot en cours est superieur au mot stocké comme étant me plus long
+        //alors on remplace le mot stocké
+        if(result.length < word.length)
+        {
+            result = word;
+        }
+    }
+    return result;
 }
+console.log(findLongestWord('Web Development Tutorial'));
